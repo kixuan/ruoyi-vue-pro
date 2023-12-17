@@ -41,6 +41,7 @@ public class AdminUserDO extends TenantBaseDO {
      * 加密后的密码
      *
      * 因为目前使用 {@link BCryptPasswordEncoder} 加密器，所以无需自己处理 salt 盐
+     * @ link 允许读者直接从password字段的注释中点击一个链接跳转到BCryptPasswordEncoder类的文档。【就是ctrl+B进去啦】
      */
     private String password;
     /**
@@ -57,6 +58,7 @@ public class AdminUserDO extends TenantBaseDO {
     private Long deptId;
     /**
      * 岗位编号数组
+     * post_ids转成json数据
      */
     @TableField(typeHandler = JsonLongSetTypeHandler.class)
     private Set<Long> postIds;
